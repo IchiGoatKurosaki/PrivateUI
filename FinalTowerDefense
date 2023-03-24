@@ -270,7 +270,7 @@ local function LoadConfiguration(Configuration)
 				end    
 			end)
 		else
-			RayfieldLibrary:Notify({Title = "Save Settings Error", Content = "Cannot Save Settings For  '"..FlagName.. "'' , Please Check Again!"})
+			--RayfieldLibrary:Notify({Title = "Save Settings Error", Content = "Cannot Save Settings For  '"..FlagName.. "'' , Please Check Again!"})
 		end
 	end
 end
@@ -3299,7 +3299,7 @@ function RayfieldLibrary:LoadConfiguration()
 		pcall(function()
 			if isfile(ConfigurationFolder .. "/" .. CFileName .. ConfigurationExtension) then
 				LoadConfiguration(readfile(ConfigurationFolder .. "/" .. CFileName .. ConfigurationExtension))
-				RayfieldLibrary:Notify({Title = "Loading Saved Settings", Content = "Successfully loading saved settings."})
+			
 			end
 		end)
 	end
